@@ -1,0 +1,25 @@
+
+
+.img-flag {
+    height: .875rem;
+    margin-top: .18752rem;
+    vertical-align: top;
+    -ms-flex-item-align: start;
+    align-self: flex-start
+}
+
+#topnav .buy-button .dropdown-item {
+    line-height: 20px
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, li, span, button, label, div {
+    font-family: 'Cairo', sans-serif  !important;
+}
+
+.direction_ltr {
+    direction: ltr
+}
+
+#whatsapp-link-generator-form .iti--allow-dropdown {
+    display: flex;
+}
