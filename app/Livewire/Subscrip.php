@@ -39,7 +39,8 @@ class Subscrip extends Component
     public function subscrip($id)
 
     {
-        return view('payment.index',compact('amount'));
+
+        return view('payment.index',compact('amount','id'));
 
     }
 }

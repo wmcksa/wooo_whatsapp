@@ -20,7 +20,7 @@
     description: ' Order',
    publishable_api_key:'pk_test_VMTBi3PADeUdugTm4wvuaYt8g8migQJP6PFKfR2F',
 
-    callback_url:  'https://whatsapp.wmc-ksa.com/checkout/{{ 1 }}' ,
+    callback_url:  'https://whatsapp.wmc-ksa.com/checkout/{{ $id }}' ,
     methods: ['creditcard'],
 
   })

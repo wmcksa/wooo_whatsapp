@@ -16,7 +16,7 @@
                             <div style="
                             background: whitesmoke;
                         ">
-                                https://api.wmc-ksa.com/api/send_massages
+                                {{ env('APP_DOMAIN') }}/api/send_massages
                             </div>
                             <span>
                             </span>
