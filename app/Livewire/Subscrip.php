@@ -26,8 +26,9 @@ class Subscrip extends Component
 
             $start_at =   Carbon::createFromDate($user->subscrip->start_at);
             $end_at = Carbon::createFromDate($user->subscrip->end_at);
+          Carbon::now()->isAfter($end_at);
 
-            $this->dayOf = $end_at->diffInDays($start_at);
+            $this->dayOf =Carbon::parse($end_at)->diffInDays();
 
             $this->userScbscrip = Package::find($user->subscrip->package_id);
         }
@@ -38,24 +39,7 @@ class Subscrip extends Component
     public function subscrip($id)
 
     {
-        $package = Package::find($id);
-        $auth = Auth::guard('web')->user();
-        $user = User::where('id', $auth->id)->with('subscrip')->first();
-        if ($user->subscrip == NULL) {
-            $Subscrip = new ModelsSubscrip();
-            $Subscrip->user_id = $user->id;
-            $Subscrip->package_id = $package->id;
-            $Subscrip->start_at = Carbon::now();
-            $Subscrip->end_at = Carbon::now()->addDays($package->days);
-            $Subscrip->status = 0;
-            $Subscrip->save();
+        return view('payment.index',compact('amount'));
 
-            $order_subscrip = new OrderSupscrip();
-            $order_subscrip->user_id = $user->id;
-            $order_subscrip->package_id = $package->id;
-            $Subscrip->save();
-        } else {
-            session()->flash('success', 'انت بالفعل مشترك في العرض');
-        }
     }
 }

@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/payment/{id}/{amount}', 'App\Http\Controllers\PaymentController@payment')->name('paymentMoyasar');
+Route::get('/checkout/{id}', 'App\Http\Controllers\PaymentController@checkout')->name('checkout');
 
 Route::get('/register', 'App\Http\Controllers\HomeController@index')->name('register');
 Route::post('/register', 'App\Http\Controllers\HomeController@register')->name('register');

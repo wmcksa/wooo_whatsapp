@@ -3,6 +3,8 @@
 return [
 
     'title' => 'لوحة التحكم',
+    'Massages' => 'لوحة التحكم',
+
 
     'actions' => [
 

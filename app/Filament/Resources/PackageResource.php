@@ -22,7 +22,10 @@ class PackageResource extends Resource
     protected static ?string $model = Package::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    public static function getNavigationLabel(): string
+    {
+        return __('Packages');
+    }
     public static   function shouldRegisterNavigation(): bool
     {
         return auth()->user()->type=="admin"?true:false;

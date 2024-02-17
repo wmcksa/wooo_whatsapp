@@ -3,6 +3,7 @@
 return [
 
     'direction' => 'rtl',
+    'Massages' => 'لوحة التحكم',
 
     'actions' => [
 

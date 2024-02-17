@@ -19,7 +19,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class UserResource extends Resource
 {
     protected static ?string $model = User::class;
-
+    public static function getNavigationLabel(): string
+    {
+        return __('Users');
+    }
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     public static   function shouldRegisterNavigation(): bool
     {

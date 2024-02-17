@@ -1,0 +1,36 @@
+{
+
+    "Name": "NAME",
+    "Block": "Block",
+    "Price": "Price",
+    "Calories": "Calories ",
+    "Description": "Description",
+    "Category": "Category",
+    "Unit": "Unit", 
+    "User": "User",
+    "Email": " Email",
+    "Password": "Password",
+    "File": "File",
+    "Image": "Image",
+    "Roles": "Roles",
+    "User type": "User Type ",
+    "Products":"Products",
+    "Categories":"Categories",
+    "Units":"Units",
+    "Users":"Users",
+    "Permissions":"Permissions",
+    "Menu Files":"Menu Files",
+    "Settings":"Settings",
+    "Logo":"Logo",
+    "Phone1":"Phone1",
+    "Phone2":"Phone2",
+    "Whatsapp url":"Whatsapp Url",
+    "Insta url":"Inst url",
+    "Snap url":"Snap url",
+    "Facebook url":"Facebook url",
+    "Maninatnace Mode":"Maninatnace Mode"
+
+
+  
+  
+  }

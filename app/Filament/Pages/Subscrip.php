@@ -12,4 +12,8 @@ class Subscrip extends Page
         return auth()->user()->type=="customer"?true:false;
     }
     protected static string $view = 'filament.pages.subscrip';
+    public static function getNavigationLabel(): string
+    {
+        return __('Subscrip');
+    }
 }

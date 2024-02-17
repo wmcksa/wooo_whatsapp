@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Auth;
 class MassageResource extends Resource
 {
     protected static ?string $model = Massage::class;
-
+   public static function getNavigationLabel(): string
+    {
+        return __('Massages');
+    }
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     public static   function shouldRegisterNavigation(): bool
     {

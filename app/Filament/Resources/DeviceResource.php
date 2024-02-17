@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Auth;
 class DeviceResource extends Resource
 {
     protected static ?string $model = Device::class;
-
+    public static function getNavigationLabel(): string
+    {
+        return __('Devices');
+    }
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     public static   function shouldRegisterNavigation(): bool
     {
