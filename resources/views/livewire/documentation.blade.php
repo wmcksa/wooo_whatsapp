@@ -16,7 +16,7 @@
                             <div style="
                             background: whitesmoke;
                         ">
-                                {{ env('APP_DOMAIN') }}/api/send_massages
+                                {{ env('APP_URL') }}/api/send_massages
                             </div>
                             <span>
                             </span>
