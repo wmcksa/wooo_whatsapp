@@ -16,6 +16,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class SubscripResource extends Resource
 {
+    public static   function shouldRegisterNavigation(): bool
+    {
+        return auth()->user()->type=="admin"?true:false;
+    }
     protected static ?string $model = Subscrip::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

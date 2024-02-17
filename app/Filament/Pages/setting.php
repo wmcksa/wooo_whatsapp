@@ -17,6 +17,10 @@ class setting extends Page
 {
     use InteractsWithForms;
     public ?array $data = [];
+    public static   function shouldRegisterNavigation(): bool
+    {
+        return auth()->user()->type=="admin"?true:false;
+    }
     public static function getNavigationLabel(): string
     {
         return __('settings');
