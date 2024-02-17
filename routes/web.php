@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/cc', function () {
+    Artisan::call('optimize:clear');
+
+    return "Cache cleared successfully";
+ });
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
 });
