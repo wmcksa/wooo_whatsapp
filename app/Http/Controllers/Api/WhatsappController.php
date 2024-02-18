@@ -24,16 +24,16 @@ class WhatsappController extends Controller
         if($request->type == "image"){
             $body = [
                 'image'=>['url'=>$request->url],
-                'caption'=>$request->text
+                'caption'=>$request->body
             ];
         }elseif($request->type == "video"){
             $body = [
 
                 'video'=>['url'=>$request->url],
-                'caption'=>$request->text
+                'caption'=>$request->body
             ];
         }else{
-				$body = ['text'=>$request->text];
+				$body = ['text'=>$request->body];
         }
 
         $token = \Laravel\Sanctum\PersonalAccessToken::findToken($request->token);
