@@ -21,55 +21,63 @@ class WhatsappController extends Controller
 
     public function send_massages(Request $request)
     {
+        if($request->type == "image"){
+            $body = [
+                'image'=>['url'=>$request->url],
+                'caption'=>$request->text
+            ];
+        }elseif($request->type == "video"){
+            $body = [
+
+                'video'=>['url'=>$request->url],
+                'caption'=>$request->text
+            ];
+        }else{
+				$body = ['text'=>$request->text];
+        }
+
         $token = \Laravel\Sanctum\PersonalAccessToken::findToken($request->token);
         // Get the assigned user
         $user_token = $token->tokenable;
-$user = User::with('subscrip')->find($user_token->id);
-if(is_null($user->subscrip )){
-    return "انت غير مشترك ";
-}else{
+        $user = User::with('subscrip')->find($user_token->id);
+        if (is_null($user->subscrip)) {
+            return "انت غير مشترك ";
+        } else {
 
-$startDate=$user->subscrip->start_at;
-$endDate=$user->subscrip->end_at;
-$dateToCheck = Carbon::now();
-if ($dateToCheck->between($startDate, $endDate)) {
+            $startDate = $user->subscrip->start_at;
+            $endDate = $user->subscrip->end_at;
+            $dateToCheck = Carbon::now();
+            if ($dateToCheck->between($startDate, $endDate)) {
 
-    $device = DB::table('devices')->select('id', 'name', 'status')->where('user_id', $user->id)->first();
-    $response = Http::withHeaders([
-        'Content-Type' => 'application/json'
-    ])->post(
-        env('URL_WA_SERVER') . '/' . $device->name . '/messages/send',
-        [
-            'jid' => $request->number . "@s.whatsapp.net",
-            'type' => "number",
-            'message' =>  ['text' => $request->body]
-        ]
-    );
-    $res = json_decode($response->getBody());
-    try{
-        if($res->error == "Session not found"){
+                $device = DB::table('devices')->select('id', 'name', 'status')->where('user_id', $user->id)->first();
+                $response = Http::withHeaders([
+                    'Content-Type' => 'application/json'
+                ])->post(
+                    env('URL_WA_SERVER') . '/' . $device->name . '/messages/send',
+                    [
+                        'jid' => $request->number . "@s.whatsapp.net",
+                        'type' => "number",
+                        'message' =>   $body
+                    ]
+                );
+                $res = json_decode($response->getBody());
+                try {
+                    if ($res->error == "Session not found") {
 
-            return $res;
+                        return $res;
+                    }
+                } catch (Exception $e) {
+                    $massage = new Massage();
+                    $massage->massage = $request->body;
+                    $massage->device_id =  $device->id;
+                    $massage->status = "sended";
+                    $massage->type = 'text';
+                    $massage->save();
+                    return $res;
+                }
+            }
         }
-    }catch(Exception $e){
-            $massage = new Massage();
-            $massage->massage = $request->body;
-            $massage->device_id =  $device->id;
-            $massage->status = "sended";
-            $massage->type = 'text';
-            $massage->save();
-            return $res;
-
-
-
-}
-
-
-}
-
-
-
-    }}
+    }
     public function send_massages1(Request $request)
     {
         $device = DB::table('devices')->select('id', 'name', 'status')->where('user_id', $request->id)->first();
@@ -79,7 +87,7 @@ if ($dateToCheck->between($startDate, $endDate)) {
             $massege = Massage::where('device_id', $device->id)->count();
             if ($massege > 5) {
                 return "You must subscribe to one of the packages";
-            }else{
+            } else {
                 $response = Http::withHeaders([
                     'Content-Type' => 'application/json'
                 ])->post(
@@ -102,7 +110,7 @@ if ($dateToCheck->between($startDate, $endDate)) {
                 $massage->save();
                 return $res;
             }
-        }else{
+        } else {
             $response = Http::withHeaders([
                 'Content-Type' => 'application/json'
             ])->post(
@@ -125,7 +133,11 @@ if ($dateToCheck->between($startDate, $endDate)) {
             $massage->save();
             return $res;
         }
-
-
     }
+
+
+
+
+
+
 }
