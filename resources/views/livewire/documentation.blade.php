@@ -37,9 +37,9 @@
 
                                             </div>
                                        <h1 style="font-size: 35px; ">Send Text Message</h1>
-                                            <img src="{{ asset('storage/image/11.PNG') }}" alt="" srcset="">
+                                            <img src="{{ asset('storage/image/111.PNG') }}" alt="" srcset="">
                                             <h1 style="font-size: 35px; ">Send Text Images</h1>
-                                            <img src="{{ asset('storage/image/11.PNG') }}" alt="" srcset="">
+                                            <img src="{{ asset('storage/image/1.PNG') }}" alt="" srcset="">
                                             <h1 style="font-size: 35px; ">Send Text Video</h1>
                                             <img src="{{ asset('storage/image/mp4.PNG') }}" alt="" srcset="">
 
