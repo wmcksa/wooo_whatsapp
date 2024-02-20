@@ -18,10 +18,17 @@ use Illuminate\Support\Facades\Auth;
 class DeviceResource extends Resource
 {
     protected static ?string $model = Device::class;
-    public static function getNavigationLabel(): string
+
+
+    public static function getPluralModelLabel(): string
     {
         return __('Devices');
     }
+    public static function getModelLabel(): string
+    {
+        return __('Device');
+    }
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     public static   function shouldRegisterNavigation(): bool
     {
@@ -50,9 +57,9 @@ class DeviceResource extends Resource
 
             ->columns([
 
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('number'),
-                Tables\Columns\TextColumn::make('status'),
+                Tables\Columns\TextColumn::make('name')->translateLabel(),
+                Tables\Columns\TextColumn::make('number')->translateLabel(),
+                Tables\Columns\TextColumn::make('status')->translateLabel(),
             ])
             ->filters([
                 //

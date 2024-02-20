@@ -22,9 +22,14 @@ class PackageResource extends Resource
     protected static ?string $model = Package::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    public static function getNavigationLabel(): string
+
+    public static function getPluralModelLabel(): string
     {
         return __('Packages');
+    }
+    public static function getModelLabel(): string
+    {
+        return __('Package');
     }
     public static   function shouldRegisterNavigation(): bool
     {
@@ -46,10 +51,10 @@ class PackageResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('description')->sortable()->searchable(),
-                TextColumn::make('days')->sortable()->searchable(),
-                TextColumn::make('price')->sortable()->searchable(),
+                TextColumn::make('name')->sortable()->searchable()->translateLabel(),
+                TextColumn::make('description')->sortable()->searchable()->translateLabel(),
+                TextColumn::make('days')->sortable()->searchable()->translateLabel(),
+                TextColumn::make('price')->sortable()->searchable()->translateLabel(),
 
                 ])
             ->filters([

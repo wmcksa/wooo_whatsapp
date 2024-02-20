@@ -16,4 +16,6 @@ class Subscrip extends Page
     {
         return __('Subscrip');
     }
+
+
 }

@@ -21,19 +21,19 @@ class WhatsappController extends Controller
 
     public function send_massages(Request $request)
     {
-        if($request->type == "image"){
+        if ($request->type == "image") {
             $body = [
-                'image'=>['url'=>$request->url],
-                'caption'=>$request->body
+                'image' => ['url' => $request->url],
+                'caption' => $request->body
             ];
-        }elseif($request->type == "video"){
+        } elseif ($request->type == "video") {
             $body = [
 
-                'video'=>['url'=>$request->url],
-                'caption'=>$request->body
+                'video' => ['url' => $request->url],
+                'caption' => $request->body
             ];
-        }else{
-				$body = ['text'=>$request->body];
+        } else {
+            $body = ['text' => $request->body];
         }
 
         $token = \Laravel\Sanctum\PersonalAccessToken::findToken($request->token);
@@ -75,6 +75,8 @@ class WhatsappController extends Controller
                     $massage->save();
                     return $res;
                 }
+            }else{
+                return "عليك تجديد الاشتراك";
             }
         }
     }
@@ -134,10 +136,4 @@ class WhatsappController extends Controller
             return $res;
         }
     }
-
-
-
-
-
-
 }

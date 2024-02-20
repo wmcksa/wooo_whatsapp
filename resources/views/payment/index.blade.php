@@ -18,9 +18,9 @@
     amount: {{$amount}}*100,
     currency: 'SAR',
     description: ' Order',
-   publishable_api_key:'pk_test_VMTBi3PADeUdugTm4wvuaYt8g8migQJP6PFKfR2F',
+   publishable_api_key:'{{env('MOYASAR_KEY')}}',
 
-    callback_url:  'https://whatsapp.wmc-ksa.com/checkout/{{ $id }}' ,
+    callback_url:'{{env('APP_URL')}}/checkout/{{ $id }}' ,
     methods: ['creditcard'],
 
   })

@@ -28,7 +28,7 @@ class Scan extends Page
 
             try {
                 if ($cek->status == "AUTHENTICATED") {
-                    $image = asset('image/connect.gif');
+                    $image = asset('image/connect.png');
                     DB::table('devices')->where('user_id', $id)->update(['status' => "AUTHENTICATED", 'updated_at' => now()]);
                     // return redirect()->back()->with('success', 'Session found.');
                     $reloadpage = "";

@@ -13,4 +13,6 @@ class documentation extends Page
     {
         return __('Documentation');
     }
+
+
 }

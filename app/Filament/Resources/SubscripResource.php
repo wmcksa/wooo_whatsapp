@@ -36,9 +36,9 @@ class SubscripResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('user.name')->sortable()->searchable(),
-                TextColumn::make('package.name')->sortable()->searchable(),
-                TextColumn::make('package.price')->sortable()->searchable(),
+                TextColumn::make('user.name')->sortable()->searchable()->translateLabel(),
+                TextColumn::make('package.name')->sortable()->searchable()->translateLabel(),
+                TextColumn::make('package.price')->sortable()->searchable()->translateLabel(),
 
             ])
             ->filters([
@@ -62,9 +62,13 @@ class SubscripResource extends Resource
         ];
     }
 
-    public static function getNavigationLabel(): string
+    public static function getPluralModelLabel(): string
     {
         return __('Subscrips');
+    }
+    public static function getModelLabel(): string
+    {
+        return __('Subscrip');
     }
 
     public static function getPages(): array

@@ -19,9 +19,14 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class UserResource extends Resource
 {
     protected static ?string $model = User::class;
-    public static function getNavigationLabel(): string
+
+    public static function getPluralModelLabel(): string
     {
         return __('Users');
+    }
+    public static function getModelLabel(): string
+    {
+        return __('User');
     }
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     public static   function shouldRegisterNavigation(): bool
@@ -55,9 +60,8 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('email')->sortable()->searchable(),
-                TextColumn::make('subscrip.status')->sortable()->searchable(),
+                TextColumn::make('name')->sortable()->searchable()->translateLabel(),
+                TextColumn::make('email')->sortable()->searchable()->translateLabel(),
 
 
             ])

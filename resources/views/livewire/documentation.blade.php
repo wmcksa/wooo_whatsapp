@@ -3,7 +3,7 @@
     <div class='panel panel-default'>
         <div class='panel-heading'>documentation</div>
         <div class='panel-body'>
-            = <div class='form-group'>
+ <div class='form-group'>
                 <div for="" class=" col-sm-12" style="
           text-align: left;
       ">
@@ -36,8 +36,14 @@
               <span class="token string-property property">body</span><span class="token operator">:</span> <span class="token string">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus architecto tenetur neque, t quisquam saepe maiores ullam,?</span><span class="token punctuation">,</span> <span class="token comment">// </span>
 
                                             </div>
-
+                                       <h1 style="font-size: 35px; ">Send Text Message</h1>
                                             <img src="{{ asset('image/11.png') }}" alt="" srcset="">
+                                            <h1 style="font-size: 35px; ">Send Text Images</h1>
+                                            <img src="{{ asset('image/11.png') }}" alt="" srcset="">
+                                            <h1 style="font-size: 35px; ">Send Text Video</h1>
+                                            <img src="{{ asset('image/mp4.png') }}" alt="" srcset="">
+
+
                                         </div>
                                     </div>
                                 </div>

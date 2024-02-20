@@ -18,10 +18,16 @@ use Illuminate\Support\Facades\Auth;
 class MassageResource extends Resource
 {
     protected static ?string $model = Massage::class;
-   public static function getNavigationLabel(): string
+
+    public static function getPluralModelLabel(): string
     {
         return __('Massages');
     }
+    public static function getModelLabel(): string
+    {
+        return __('Massage');
+    }
+
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     public static   function shouldRegisterNavigation(): bool
     {
@@ -51,9 +57,9 @@ class MassageResource extends Resource
             }
         })
             ->columns([
-                Tables\Columns\TextColumn::make('massage'),
-                Tables\Columns\TextColumn::make('type'),
-                Tables\Columns\TextColumn::make('status')
+                Tables\Columns\TextColumn::make('massage')->translateLabel(),
+                Tables\Columns\TextColumn::make('type')->translateLabel(),
+                Tables\Columns\TextColumn::make('status')->translateLabel()
 
                 ])
             ->filters([

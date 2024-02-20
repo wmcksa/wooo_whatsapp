@@ -47,7 +47,7 @@ class Register extends BaseRegister
         $token = User::where('id',  $user->id)->update(['token'=> $success['token']]); //update
 
           $device = new Device();
-          $device->name = $user->name;
+          $device->name = $user->id;
           $device->user_id =  $user->id;
 
           $device->number = $data['phone'];

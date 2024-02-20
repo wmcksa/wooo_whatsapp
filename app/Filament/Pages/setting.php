@@ -19,7 +19,7 @@ class setting extends Page
     public ?array $data = [];
     public static   function shouldRegisterNavigation(): bool
     {
-        return auth()->user()->type=="admin"?true:false;
+        return auth()->user()->type=="super_admin"?true:false;
     }
     public static function getNavigationLabel(): string
     {

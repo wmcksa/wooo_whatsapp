@@ -39,8 +39,9 @@ class Subscrip extends Component
     public function subscrip($id)
 
     {
+        $package = Package::find($id);
+        dd( $package);
 
-        return view('payment.index',compact('amount','id'));
 
     }
 }
