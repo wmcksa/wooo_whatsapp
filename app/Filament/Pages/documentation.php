@@ -14,5 +14,13 @@ class documentation extends Page
         return __('Documentation');
     }
 
+    public static function getPluralModelLabel(): string
+    {
+        return __('Documentation');
+    }
+    public function getHeading(): string
+    {
+        return __('Documentation');
+    }
 
 }

@@ -16,6 +16,9 @@ class Subscrip extends Page
     {
         return __('Subscrip');
     }
-
+    public function getHeading(): string
+    {
+        return __('Subscrip');
+    }
 
 }
