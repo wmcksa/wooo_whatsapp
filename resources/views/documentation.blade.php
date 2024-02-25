@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="branding">
                     <h1 class="logo">
-                        <a href="index.html">
+                        <a href="">
                             <span aria-hidden="true" class="icon_documents_alt icon"></span>
                             <span class="text-highlight"> cheap&best</span><span class="text-bold">Docs</span>
                         </a>
