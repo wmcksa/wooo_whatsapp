@@ -1,7 +1,7 @@
 <div>
 
     <div class='panel panel-default'>
-        <div class='panel-heading'></div>
+        <div class='panel-heading'>documentation</div>
         <div class='panel-body'>
  <div class='form-group'>
                 <div for="" class=" col-sm-12" style="
