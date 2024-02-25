@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap project documentation theme for developers</title>
+    <title> cheap&best</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +48,7 @@
         <div class="doc-wrapper">
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
-                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> cheapest&best</h1>
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> cheap&best</h1>
                 </div><!--//doc-header-->
                 <div class="doc-body row">
                     <div class="doc-content col-md-9 col-12 order-1">
@@ -61,6 +61,8 @@
                                     <p>
                                         The best way to send WhatsApp messages using software applications
                                     </p>
+
+                                    <h3>Your token :{{ Auth::guard('web')->user()->token ?? " " }}</h3>
 
                                 </div><!--//section-block-->
                                 <div id="Text" class="section-block">
@@ -80,9 +82,9 @@ $response = Http::withHeaders([
     ]
 );
 </code></pre>
+<img src="{{ asset('storage/image/111.PNG') }}" alt="" srcset="">
 
                                     </div>
-                                    <img src="{{ asset('storage/image/111.PNG') }}" alt="" srcset="">
 
                                     <!--//code-block-->
                                 </div><!--//section-block-->
@@ -106,9 +108,9 @@ $response = Http::withHeaders([
     ]
 );
                                         </code></pre>
+                                        <img src="{{ asset('storage/image/1.PNG') }}" alt="" srcset="">
 
                                     </div><!--//code-block-->
-                                    <img src="{{ asset('storage/image/1.PNG') }}" alt="" srcset="">
 
                                 </div><!--//section-block-->
                                 <div id="Video" class="section-block">
@@ -130,8 +132,9 @@ $response = Http::withHeaders([
 );
 
                                         </code></pre>
+                                        <img src="{{ asset('storage/image/mp4.PNG') }}" alt="" srcset="">
+
                                     </div><!--//code-block-->
-                                    <img src="{{ asset('storage/image/mp4.PNG') }}" alt="" srcset="">
 
                                 </div><!--//section-block-->
 
