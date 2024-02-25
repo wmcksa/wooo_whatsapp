@@ -82,7 +82,9 @@ $response = Http::withHeaders([
     ]
 );
 </code></pre>
-<img src="{{ asset('storage/image/111.PNG') }}" alt="" srcset="">
+<img src="{{ asset('storage/image/111.PNG') }}" alt="" srcset="" style="
+width: 100%;
+">
 
                                     </div>
 
@@ -108,7 +110,9 @@ $response = Http::withHeaders([
     ]
 );
                                         </code></pre>
-                                        <img src="{{ asset('storage/image/1.PNG') }}" alt="" srcset="">
+                                        <img src="{{ asset('storage/image/1.PNG') }}" alt="" srcset="" style="
+                                        width: 100%;
+                                    ">
 
                                     </div><!--//code-block-->
 
@@ -132,7 +136,9 @@ $response = Http::withHeaders([
 );
 
                                         </code></pre>
-                                        <img src="{{ asset('storage/image/mp4.PNG') }}" alt="" srcset="">
+                                        <img src="{{ asset('storage/image/mp4.PNG') }}" alt="" srcset="" style="
+                                        width: 100%;
+                                    ">
 
                                     </div><!--//code-block-->
 
