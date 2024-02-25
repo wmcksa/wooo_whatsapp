@@ -28,7 +28,7 @@ class UserResource extends Resource
     {
         return __('User');
     }
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
     public static   function shouldRegisterNavigation(): bool
     {
         return auth()->user()->type=="admin"?true:false;

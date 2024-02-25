@@ -117,8 +117,11 @@
 <ul class="navigation-menu">
 <li class="mx-3 mx-lg-auto"><a class="px-0" href="#whatsappapi" class="sub-menu-item">الرئيسية</a></li>
 <li class="mx-3 mx-lg-auto"><a class="px-0" href="#whatsapp-api">واتس اب API</a></li>
+<li class="mx-3 mx-lg-auto"><a class="px-0" href="/documentation" target="_blank" class="sub-menu-item"> التوثيق</a></li>
+
 <li class="mx-3 mx-lg-auto"> <a href="#ultra_tutorials">الأسعار</a><span class="sub-menu-item"></span></li>
 <li class="mx-3 mx-lg-auto"><a class="px-0" href="#ultra_faq">الأسئلة الشائعة</a><span class="sub-menu-item"></span> </li>
+
 <li class="mx-3 mx-lg-auto"><a class="px-0" href="/admin/login" target="_blank" class="sub-menu-item">تسجيل الدخول</a></li>
 </ul>
 </div>
@@ -448,7 +451,7 @@
 <h4 class="title mb-4">أسعار مرنة</h4>
 <p class="text-muted para-desc mx-auto mb-0">لقد طورنا سياسة تسعير مرنة</p>
 <p class="text-muted para-desc mx-auto mb-0">اختر الخطة التي تناسبك</p>
-<a href="https://user.whatsapp.com/signup.php?lang=ar&amp;ust=" target="_blank" class="btn btn-primary mt-4">إنشاء حساب مجاني <span class="badge rounded-pill bg-danger ms-2">3 أيام</span></a>
+<a href="/admin/register" target="_blank" class="btn btn-primary mt-4">إنشاء حساب مجاني <span class="badge rounded-pill bg-danger ms-2">3 أيام</span></a>
 </div>
 </div>
 <div class="col-lg-7 col-md-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
@@ -463,13 +466,13 @@
 <div class="card-body py-5">
 <h6 class="title fw-bold text-uppercase text-primary mb-4">{{  $package->name }} </h6>
 <div class="d-flex mb-2">
-<span class="h4 mb-0 mt-2">$</span>
-<span class="price h1 mb-0">39</span>
+<span class="h4 mb-0 mt-2">ريال</span>
+<span class="price h1 mb-0"> {{  $package->price }} </span>
 <span class="h4 align-self-end mb-1">/شهر</span>
 </div>
 <h6 class="mb-4">الدولار الأمريكي</h6>
 <ul class="list-unstyled mb-0 ps-0">
-<li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>صالحة لمدة 30 يوماً </li>
+<li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>صالحة لمدة {{  $package->days }} يوماً </li>
 <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>ارسال رسائل غير محدود </li>
 <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>تلقي رسائل غير محدود</li>
 <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>إرسال الوسائط / المستندات</li>

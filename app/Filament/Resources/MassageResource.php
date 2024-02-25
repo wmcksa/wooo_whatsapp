@@ -28,7 +28,7 @@ class MassageResource extends Resource
         return __('Massage');
     }
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-envelope-open';
     public static   function shouldRegisterNavigation(): bool
     {
         return auth()->user()->type=="customer"?true:false;
