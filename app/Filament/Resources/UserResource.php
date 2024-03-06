@@ -39,11 +39,23 @@ class UserResource extends Resource
             ->schema([
                 TextInput::make('name')->required()->translateLabel(),
                 TextInput::make('email')->required()->translateLabel(),
+                TextInput::make('phone')->required()->translateLabel(),
+                TextInput::make('password')->required()->translateLabel(),
 
                 Select::make('type')
                     ->options([
                         'admin' => 'admin',
                         'customer' => 'customer',
+                    ]),
+                    Select::make('protected')
+                    ->options([
+                        '1' => 'active',
+                        '2' => 'Inactive',
+                    ]),
+                    Select::make('protect')
+                    ->options([
+                        '1' => 'active',
+                        '2' => 'Inactive',
                     ]),
                     Select::make('status')
                     ->options([

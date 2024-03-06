@@ -24,10 +24,12 @@ class Scan extends Page
         $device = DB::table('devices')->select('name', 'status')->where('user_id', $id)->first();
         // cek device ready?
         $find = Http::get('http://173.249.40.211:3000/sessions/' . $device->name . '/status');
+
         $cek = json_decode($find->getBody());
 
             try {
                 if ($cek->status == "AUTHENTICATED") {
+
                     $image = asset('image/connect.png');
                     DB::table('devices')->where('user_id', $id)->update(['status' => "AUTHENTICATED", 'updated_at' => now()]);
                     // return redirect()->back()->with('success', 'Session found.');
