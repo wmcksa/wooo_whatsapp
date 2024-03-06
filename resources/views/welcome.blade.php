@@ -571,7 +571,7 @@
 </div>
 </div>
 <div id="whatsappchat">
-<a href="https://api.whatsapp.com/send?phone=971507032874&amp;text=%d9%85%d8%b1%d8%ad%d8%a8%d8%a7" target="_blank" class="whatsappLink">
+<a href="https://api.whatsapp.com/send?phone=0560896483&amp;text=%d9%85%d8%b1%d8%ad%d8%a8%d8%a7" target="_blank" class="whatsappLink">
 <img class="whatsappimage" alt="WhatsApp Chat">
 <span class="whatsapptext">
 <img class="whatsapp-ico" alt="WhatsApp Chat">
