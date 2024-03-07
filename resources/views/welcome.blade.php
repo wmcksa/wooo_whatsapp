@@ -137,7 +137,7 @@
 <p class="para-desc mx-auto mb-3 h4">استخدم API الإحترافية بـ 39$ شهرياً .</p>
 <p class="para-desc mx-auto mb-0">قم بإرسال واستقبال الرسائل عبر طلبات HTTP بكل سهولة</p>
 <div class="mt-4" pt-2>
-<a href="/register" target="_blank" class="btn btn-primary mt-2 me-2"><i class="uil uil-rocket me-2"></i>تجربة مجانية</a>
+<a href="/admin/register" target="_blank" class="btn btn-primary mt-2 me-2"><i class="uil uil-rocket me-2"></i>تجربة مجانية</a>
 </div>
 </div>
 </div>
@@ -477,7 +477,7 @@
 <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>إرسال الوسائط / المستندات</li>
 <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>دعم الويب هوك</li>
 </ul>
-<a href="/register" target="_blank" class="btn btn-primary mt-4">جربه الآن</a>
+<a href="/admin/register" target="_blank" class="btn btn-primary mt-4">جربه الآن</a>
 </div>
 </div>
 </div>
