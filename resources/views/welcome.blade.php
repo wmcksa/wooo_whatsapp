@@ -466,8 +466,9 @@
 <div class="card-body py-5">
 <h6 class="title fw-bold text-uppercase text-primary mb-4">{{  $package->name }} </h6>
 <div class="d-flex mb-2">
-<span class="h4 mb-0 mt-2">ريال</span>
 <span class="price h1 mb-0"> {{  $package->price }} </span>
+<span class="h4 mb-0 mt-2">ريال</span>
+
 <span class="h4 align-self-end mb-1">/شهر</span>
 </div>
 <ul class="list-unstyled mb-0 ps-0">
