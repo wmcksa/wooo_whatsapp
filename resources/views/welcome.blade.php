@@ -470,7 +470,6 @@
 <span class="price h1 mb-0"> {{  $package->price }} </span>
 <span class="h4 align-self-end mb-1">/شهر</span>
 </div>
-<h6 class="mb-4">الدولار الأمريكي</h6>
 <ul class="list-unstyled mb-0 ps-0">
 <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>صالحة لمدة {{  $package->days }} يوماً </li>
 <li class="h6 text-muted mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>ارسال رسائل غير محدود </li>
@@ -647,7 +646,7 @@
 <li class="list-inline-item"><img src="../home/assets/images/payments/discover.png" class="avatar avatar-ex-sm" title="Discover" alt="payment"></li>
 <li class="list-inline-item"><img src="../home/assets/images/payments/master-card.png" class="avatar avatar-ex-sm" title="Master Card" alt="payment"></li>
 <li class="list-inline-item"><img src="../home/assets/images/payments/paypal.png" class="avatar avatar-ex-sm" title="Paypal" alt="payment"></li>
-<li class="list-inline-item" <img src="../home/assets/images/payments/visa.png" class="avatar avatar-ex-sm" title="Visa" alt="payment"></li>
+<li class="list-inline-item" ><img src="../home/assets/images/payments/visa.png" class="avatar avatar-ex-sm" title="Visa" alt="payment"></li>
 </ul>
 </div>
 </div>
