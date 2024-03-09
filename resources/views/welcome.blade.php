@@ -506,7 +506,7 @@
 </li>
 <li>
 <i class="bx bx-phone-call border-radius-50"></i>
-<a href="tel:009-215-5596">009-215-5596</a>
+<a href="tel:0553907575">0553907575</a>
 </li>
 </ul>
 </div>
