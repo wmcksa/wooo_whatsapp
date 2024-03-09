@@ -423,8 +423,7 @@
     <div class="row pt-45">
     <div class="col-lg-6">
     <div class="contact-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96573.31103674119!2d-73.91097366523668!3d40.85176866829554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28b553a697cb1%3A0x556e43a78ff15c77!2sThe%20Bronx%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1604859108666!5m2!1sen!2sbd"></iframe>
-    </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14309.015918258052!2d50.1888636!3d26.2858653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e93e6cd91ddb%3A0x78350efd943466d0!2z2LTYsdmD2Kkg2KfZhNmG2KfZgdiw2Kkg2YTZhNiq2LPZiNmK2YIg2KfZhNil2YTZg9iq2LHZiNmG2YogV2luZG93IGUtbWFya2V0aW5nIEFnZW5jeQ!5e0!3m2!1sar!2ssa!4v1709982010226!5m2!1sar!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
     </div>
     <div class="col-lg-6">
     <div class="contact-form">
