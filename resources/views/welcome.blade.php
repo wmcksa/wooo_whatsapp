@@ -49,7 +49,7 @@
 <ul>
 <li>
 <i class="bx bxs-location-plus"></i>
-<a href="#">المملكة العربيّة السعوديه المنطقة الشرقية الحساء</a>
+<a href="#">المملكة العربيّة السعوديه المنطقة الشرقية الخبر</a>
 </li>
 <li>
 <i class="bx bxs-envelope"></i>
