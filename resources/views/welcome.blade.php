@@ -32,9 +32,21 @@
 <link rel="stylesheet" href="assets/css/theme-dark.css">
 
 <link rel="stylesheet" href="assets/css/rtl.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <title>واتساب api</title>
+<style>
+    *{
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+</style>
 </head>
 <body>
 <div class="preloader">
